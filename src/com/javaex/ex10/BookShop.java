@@ -41,5 +41,8 @@ public class BookShop {
     private static void displayBookInfo(Book[] books) {
         
     	//코드작성
+    	for(int i = 0; i < books.length; i++) {
+    		System.out.printf("%d 책 제목: %s, 작가: %s, 대여유무:", books);
+    	}
     }
 }
