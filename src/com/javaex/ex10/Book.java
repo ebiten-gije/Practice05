@@ -5,12 +5,13 @@ public class Book {
     public int bookNo;
     public String title;
     public String author;
-    public int stateCode = 1;
+    public int stateCode;
     
     public Book(int bookNo, String title, String author) {
     	this.bookNo = bookNo;
     	this.title = title;
     	this.author = author;
+    	stateCode = 1;
     }
     
     public int getBookNo() {
@@ -32,5 +33,16 @@ public class Book {
     	this.author = author;
     }
     
+    public void rent() {
+    	stateCode = 0;
+    	System.out.println(title + "이(가) 대여되었습니다.");
+    }
 
+    public void print() {
+    	if (stateCode == 1) {
+    		System.out.println("재고 있음");
+    	} else {
+    		System.out.println("대여중");
+    	}
+    }
 }
